@@ -1,0 +1,10 @@
+[INFO] Running co.edu.eam.agrodirecto.pedidos.FlujoPedidoTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.105 s -- in co.edu.eam.agrodirecto.pedidos.FlujoPedidoTest
+[INFO] Running co.edu.eam.agrodirecto.pedidos.GestorPedidosTest
+[INFO] Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.170 s -- in co.edu.eam.agrodirecto.pedidos.GestorPedidosTest
+[INFO] Running co.edu.eam.agrodirecto.registro.ServicioRegistroTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 s -- in co.edu.eam.agrodirecto.registro.ServicioRegistroTest
+[INFO] Running co.edu.eam.agrodirecto.registro.ValidadorRegistroTest
+[INFO] Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.039 s -- in co.edu.eam.agrodirecto.registro.ValidadorRegistroTest
+[INFO] Tests run: 61, Failures: 0, Errors: 0, Skipped: 0
+[INFO] BUILD SUCCESS
