@@ -1,0 +1,6 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+agrodirecto,co.edu.eam.agrodirecto.pedidos,EstadoPedido,0,33,0,0,0,6,0,1,0,1
+agrodirecto,co.edu.eam.agrodirecto.pedidos,Pedido,0,37,0,0,0,14,0,7,0,7
+agrodirecto,co.edu.eam.agrodirecto.pedidos,GestorPedidos,8,158,8,42,2,29,8,25,0,7
+agrodirecto,co.edu.eam.agrodirecto.registro,ServicioRegistro,0,50,0,12,0,16,0,9,0,3
+agrodirecto,co.edu.eam.agrodirecto.registro,ValidadorRegistro,0,79,0,26,0,13,0,17,0,4

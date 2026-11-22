@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ValidadorRegistro.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">agrodirecto</a> &gt; <a href="index.source.html" class="el_package">co.edu.eam.agrodirecto.registro</a> &gt; <span class="el_source">ValidadorRegistro.java</span></div><h1>ValidadorRegistro.java</h1><pre class="source lang-java linenums">package co.edu.eam.agrodirecto.registro;
+
+/**
+ * Reglas del registro de usuarios. Cada método revisa una sola regla y no depende de otras clases.
+ */
+public final class ValidadorRegistro {
+
+    private ValidadorRegistro() {
+    }
+
+    /** RF-01: el rol debe ser exactamente AGRICULTOR o COMPRADOR. */
+    public static boolean rolValido(String rol) {
+<span class="fc bfc" id="L13" title="All 4 branches covered.">        return &quot;AGRICULTOR&quot;.equals(rol) || &quot;COMPRADOR&quot;.equals(rol);</span>
+    }
+
+    /** RF-02: si es AGRICULTOR, finca y municipio deben tener texto. Al COMPRADOR no se le exigen. */
+    public static boolean datosAgricultorValidos(String rol, String finca, String municipio) {
+<span class="fc bfc" id="L18" title="All 2 branches covered.">        if (!&quot;AGRICULTOR&quot;.equals(rol)) {</span>
+<span class="fc" id="L19">            return true;</span>
+        }
+<span class="fc bfc" id="L21" title="All 4 branches covered.">        return tieneTexto(finca) &amp;&amp; tieneTexto(municipio);</span>
+    }
+
+    /** RF-03: exactamente 10 dígitos (0-9) y empieza por 3. */
+    public static boolean celularValido(String celular) {
+<span class="fc bfc" id="L26" title="All 4 branches covered.">        if (celular == null || celular.length() != 10) {</span>
+<span class="fc" id="L27">            return false;</span>
+        }
+<span class="fc bfc" id="L29" title="All 2 branches covered.">        if (celular.charAt(0) != '3') {</span>
+<span class="fc" id="L30">            return false;</span>
+        }
+<span class="fc bfc" id="L32" title="All 2 branches covered.">        for (char c : celular.toCharArray()) {</span>
+<span class="fc bfc" id="L33" title="All 4 branches covered.">            if (c &lt; '0' || c &gt; '9') {</span>
+<span class="fc" id="L34">                return false;</span>
+            }
+        }
+<span class="fc" id="L37">        return true;</span>
+    }
+
+    /** No nulo, no vacío y no solo espacios. */
+    static boolean tieneTexto(String texto) {
+<span class="fc bfc" id="L42" title="All 4 branches covered.">        return texto != null &amp;&amp; !texto.isBlank();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
